@@ -1,14 +1,6 @@
 #pragma once
-#include "init.h"
-#include "LoadMedia.h"
-#include "RectLoad.h"
-#include "audio.h"
-#include "event.h"
-#include "startMenu.h"
-#include "level1.h"
-#include "replay2.h"
-#include "level2.h"
-#include "level3.h"
+#include "AllHeaderFiles.h"
+
    //extern float cloudx=0.0;//float x_pos =0.0,cloudx=0.0;
    // int gameover = 1;
 extern     int FPS;

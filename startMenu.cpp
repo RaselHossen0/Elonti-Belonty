@@ -1,4 +1,5 @@
 #include "AllHeaderFiles.h"
+
    int flast=0;
 extern  int gameover;
 int ihp=0,ihp2=0;

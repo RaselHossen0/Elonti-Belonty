@@ -1,6 +1,6 @@
 #pragma once
-#include "init.h"
-#include "RectLoad.h"
+#include "AllHeaderFiles.h"
+
 
 //extern LTexture *tex1,*stratb;
 extern SDL_Texture *tex0,*sTex ,*deadmanTex,*againTex,*tex3  ,*tex ,*gameover_tex,*cloud_Tex,*g_Tex,*bg_Tex ;

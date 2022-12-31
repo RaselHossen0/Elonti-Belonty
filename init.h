@@ -6,7 +6,8 @@
 #include <SDL2/SDL_mixer.h>
 #include <SDL2/SDL_ttf.h>
 #include <stdio.h>
-#include "audio.h"
+#include "AllHeaderFiles.h"
+
 
 #define WINDOW_WIDTH (1280)
 #define WINDOW_HEIGHT (720)

@@ -1,9 +1,6 @@
 #pragma once
-#include "init.h"
-#include "LoadMedia.h"
-//#include "RectLoad.h"
-#include "audio.h"
-//#include "event.h"
+#include "AllHeaderFiles.h"
+
 
 extern SDL_Texture *tex;
 extern SDL_Rect deadman,start_rect,fbt,gameover_rect,cloud,gRect,rRect;

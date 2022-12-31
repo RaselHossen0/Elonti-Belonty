@@ -1,8 +1,5 @@
-#include "LoadMedia.h"
-#include "init.h"
-#include "RectLoad.h"
-#include "event.h"
-#include "startMenu.h"
+#include "AllHeaderFiles.h"
+
 extern  int gameover;
  int frameTime3=0;
  int ftham=0;

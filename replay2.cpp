@@ -1,8 +1,5 @@
-#include "LoadMedia.h"
-#include "init.h"
-#include "RectLoad.h"
-#include "event.h"
-#include "startMenu.h"
+#include "AllHeaderFiles.h"
+
 extern int gameover;
 double b2x=0,b2y=0;
 double bx=0,by=0,count2=0,last=0;

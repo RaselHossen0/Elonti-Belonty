@@ -1,8 +1,6 @@
 #pragma once
-#include "LoadMedia.h"
-#include "init.h"
-#include "RectLoad.h"
-#include "event.h"
+#include "AllHeaderFiles.h"
+
 extern  int gameover;
 extern   int ihp,ihp2;
 extern int temtim1,temtim3;

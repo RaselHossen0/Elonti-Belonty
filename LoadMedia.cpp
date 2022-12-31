@@ -1,8 +1,5 @@
-#include "init.h"
+#include "AllHeaderFiles.h"
 
-#include "RectLoad.h"
-#include "audio.h"
-//#include "event.h"
 
 int vtxturWidth,vtxturHeight;
 

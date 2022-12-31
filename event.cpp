@@ -1,6 +1,5 @@
-#include "init.h"
-#include  "RectLoad.h"
-#include "LoadMedia.h"
+#include "AllHeaderFiles.h"
+
 SDL_Event ev;
 bool isRunning =true;
 int flag=0;

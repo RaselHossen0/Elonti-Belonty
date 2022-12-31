@@ -1,9 +1,6 @@
 #pragma once
-#include "LoadMedia.h"
-#include "init.h"
-#include "RectLoad.h"
-#include "event.h"
-#include "startMenu.h"
+#include "AllHeaderFiles.h"
+
  extern  int bcnt,failed,money;
  //   int var=2;
 extern    int bf,bf2;

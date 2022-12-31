@@ -1,9 +1,4 @@
-
-#include "LoadMedia.h"
-#include "init.h"
-#include "RectLoad.h"
-#include "event.h"
-#include "startMenu.h"
+#include "AllHeaderFiles.h"
   int ox=0,lifecount=0,o1f=0,frameTime=0;
    //   bool b[2]={0,0};
     //int camx=0,camy=0;

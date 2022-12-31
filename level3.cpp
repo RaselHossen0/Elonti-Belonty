@@ -1,13 +1,5 @@
-#include "init.h"
-#include "LoadMedia.h"
-#include "RectLoad.h"
-#include "audio.h"
-#include "event.h"
-#include "startMenu.h"
-#include "level1.h"
-#include "replay2.h"
-#include "level2.h"
-#include "level3.h"
+#include "AllHeaderFiles.h"
+
  int temp2=0;
 float cloudx=0.0;
  //  float cloudx=0.0;//float x_pos =0.0,cloudx=0.0;
