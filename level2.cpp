@@ -1,7 +1,6 @@
 #include "AllHeaderFiles.h"
   int ox=0,lifecount=0,o1f=0,frameTime=0;
-   //   bool b[2]={0,0};
-    //int camx=0,camy=0;
+   
     int bcnt=0,failed=0,money=0;
  //   int var=2;
     int bf=0,bf2=0;
@@ -228,14 +227,6 @@ void Level2(){
                     o2.y-=10;
                     if(o2.y==200)
                     money=money+70;
-                    // printf("%d",ox);
-                    
-                    ///if(o2.x==330&&ox==0)
-                    ///money=money+70,ox=1;
-                    ///else
-                    ///ox=0;
-                //}
-                
                 
             }
                if(oc.x<=330&&oc.x>=214){
