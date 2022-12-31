@@ -12,6 +12,7 @@ SDL_Rect monboxr,f15,f16,f17,f18,f19,f20,f21,failedr,fup,fRect,fPosition,fPositi
  SDL_Rect crossr,r75,r76,r77,r78,r79,r80,r81,r82,r83,r85,r86,r87,r88,r89,r90,r91,r92,r93,r94;
 
 SDL_Rect e_rect,help_rect;
+ //SDL_Rect moneyr;
 void LoadRect(){
 // SDL_QueryTexture(tex,NULL,NULL,&textureWidth,&textureHeight);
 // printf("%d %d ",textureHeight,textureWidth);
@@ -399,4 +400,31 @@ void LoadRect(){
     help_rect.h = 100;
     help_rect.x = (WINDOW_WIDTH - start_rect.w) / 2-52;
     help_rect.y = (WINDOW_HEIGHT - start_rect.h) / 2 - 110;
+
+       //for font
+            // moneyr.x=158;
+            // moneyr.y=89;
+            // moneyr.w=60;
+            // moneyr.h=60;
+}
+void loadTextSurfacewithRect(std::string path,TTF_Font *font,SDL_Color color, SDL_Rect area)
+{
+    SDL_Texture *newTexture=NULL;
+
+    SDL_Surface *loadedSurface=TTF_RenderText_Solid(font,path.c_str(),color);
+
+    if(!loadedSurface)
+    {
+        printf("%s\n",TTF_GetError());
+    }
+
+    newTexture=SDL_CreateTextureFromSurface(rend,loadedSurface);
+
+    SDL_FreeSurface(loadedSurface);
+     if(!newTexture)
+    {
+        printf("%s\n",IMG_GetError());
+    }
+    
+    SDL_RenderCopy(rend,newTexture,0,&area);
 }

@@ -1,45 +1,39 @@
 #include "AllHeaderFiles.h"
 
- int temp2=0;
+int temp2=0;
 float cloudx=0.0;
- //  float cloudx=0.0;//float x_pos =0.0,cloudx=0.0;
-   // int gameover = 1;
-    int FPS=60;
-    double count=0,tim=0;
-    int timee=0;
-    // int flast=0;
-    int t1,t2;
-    void TimeRandomize(){
-        srand(time(NULL));
-           int c=rand()%5;
-           switch(c){
-            case 0:
-            t1=4;
-            t2=13;
-            break;
-            case 1:
-            t1=4;
-            t2=14;
-            break;
-            case 2:
-            t1=5;
-            t2=14;
-            break;
-            case 3:
-            t1=3;
-            t2=12;
-            break;
-            case 4:
-            t1=5;
-            t2=17;
-            break;
-           }
-    }
+int FPS=60;
+double count=0,tim=0;
+int timee=0;
+int t1,t2;
+void TimeRandomize(){
+    srand(time(NULL));
+        int c=rand()%5;
+        switch(c){
+        case 0:
+        t1=4;
+        t2=13;
+        break;
+        case 1:
+        t1=4;
+        t2=14;
+        break;
+        case 2:
+        t1=5;
+        t2=14;
+        break;
+        case 3:
+        t1=3;
+        t2=12;
+        break;
+        case 4:
+        t1=5;
+        t2=17;
+        break;
+        }
+}
 void Level3(){
-
              SDL_RenderClear(rend);
-            
-
                cloudx =cloudx+0.5;
                cloud.x=(int)cloudx;
             if (cloud.x >= WINDOW_WIDTH)
@@ -52,10 +46,11 @@ void Level3(){
           
             tim=count-count2-last;
             timee=tim;
+              TTF_Font* ffr=TTF_OpenFont( "res/fonts/Oswald-Bold.ttf", 28 );
             std::string i=std::to_string(timee);
-            SDL_Surface* surface=TTF_RenderText_Solid(ff,i.c_str(),{255,255,255});
-            SDL_Texture* texx=SDL_CreateTextureFromSurface(rend,surface);
-            SDL_FreeSurface(surface);
+            SDL_Surface* ssurface=TTF_RenderText_Solid(ffr,i.c_str(),{255,255,255});
+            SDL_Texture* texx=SDL_CreateTextureFromSurface(rend,ssurface);
+            SDL_FreeSurface(ssurface);
     
             SDL_Rect rectt;//for font
             rectt.x=1123;

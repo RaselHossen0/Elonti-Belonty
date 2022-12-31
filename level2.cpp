@@ -36,20 +36,7 @@ void Level2(){
                   SDL_RenderCopy(rend,oc_tex,NULL,&oc);
                   SDL_RenderCopy(rend,f_Tex,&fRect,&fPosition);
                   SDL_RenderCopy(rend,hn_tex,NULL,&o8n);
-                  
-           
-             
-            
-                 // if(b[0]){
-                //camx+=5;
-                //b1.x+=5;
-                //if(b1.x>=1500)
-                //b1.x=0;
-           // }
-           // else
-           //frameTime++;
-           //if(frameTime==60)
-         // printf("%d",b[1]);
+          
                 if(40/frameTime==1){
                     frameTime=0;
                     if(o1f==1){
@@ -93,13 +80,6 @@ void Level2(){
                          
                    if(f==1&&b[1]==1)
            
-           //printf("A%d",frameTime);
-                        //frameTime=0;
-                
-                   // frameTime=0;
-                    
-                    
-                     //playerPosition.y=342;
                    { playerRect.x+=frameWid;
                    //playerPosition.x+=10;
                     if(playerRect.x>=textureWidth)
@@ -281,11 +261,11 @@ void Level2(){
 
             }
             
-                
+                 TTF_Font* fff=TTF_OpenFont( "res/fonts/Oswald-Bold.ttf", 28 );
             std::string i=std::to_string(money);
-            SDL_Surface* surface=TTF_RenderText_Solid(ff,i.c_str(),{255,165,0});
-            SDL_Texture* moneytex=SDL_CreateTextureFromSurface(rend,surface);
-            SDL_FreeSurface(surface);
+            SDL_Surface *dsurface=TTF_RenderText_Solid(fff,i.c_str(),{255,165,0});
+            SDL_Texture* moneytex=SDL_CreateTextureFromSurface(rend,dsurface);
+            SDL_FreeSurface(dsurface);
     
             SDL_Rect moneyr;//for font
             moneyr.x=158;

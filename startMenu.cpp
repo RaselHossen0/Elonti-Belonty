@@ -5,6 +5,7 @@ extern  int gameover;
 int ihp=0,ihp2=0;
 int temtim1,temtim3;
 int cros=0;
+extern bool isRunning;
 void StartMenu(){
     SDL_RenderClear(rend);
         if(ihp==0)
@@ -24,7 +25,7 @@ void StartMenu(){
             {
                 if (mousx >= start_rect.x && mousx <= (start_rect.x + start_rect.w) && mousy >= start_rect.y && mousy <= (start_rect.y + start_rect.h))
                 {
-                    
+                    Mix_PlayChannel(-1,mouse,0);
                    gameover=100;
                    playerPosition.x=300;
                    fPosition.x=-500;
@@ -32,11 +33,15 @@ void StartMenu(){
                    flast=SDL_GetTicks()/1000;                   
                 }
                 else if(mousx >= e_rect.x && mousx <= (e_rect.x +e_rect.w) && mousy >= e_rect.y && mousy <= (e_rect.y + e_rect.h)){
-                SDL_Quit();
+                //SDL_Quit();           
+                         Mix_PlayChannel(-1,mouse,0);
+
+                isRunning =false;
                 }
                 else if(mousx >= help_rect.x && mousx <= (help_rect.x + help_rect.w) && mousy >= help_rect.y && mousy <= (help_rect.y + help_rect.h)){
                 ihp++;
-                
+                                    Mix_PlayChannel(-1,mouse,0);
+
                 }
             }
 
@@ -68,6 +73,8 @@ void StartMenu(){
          ///if(ihp==2)
          if (button & SDL_BUTTON(SDL_BUTTON_LEFT))
             {
+                                    Mix_PlayChannel(-1,mouse,0);
+
                  if(mousx >=r85.x && mousx <= (r85.x + r85.w) && mousy >= r85.y && mousy <= (r85.y + r85.h)){
                 ihp2=1;
 
@@ -75,6 +82,8 @@ void StartMenu(){
                 }
                 else if(mousx >=r86.x && mousx <= (r86.x + r86.w) && mousy >= r86.y && mousy <= (r86.y + r86.h)){
                 ihp2=2,temtim3=SDL_GetTicks()/1000;
+                                    Mix_PlayChannel(-1,mouse,0);
+
             }
            }
             else 
@@ -102,6 +111,8 @@ void StartMenu(){
             if(temtim4>1)
                  if (button & SDL_BUTTON(SDL_BUTTON_LEFT))
             {
+                                    Mix_PlayChannel(-1,mouse,0);
+
                  if(mousx >=r90.x && mousx <= (r90.x + r90.w) && mousy >= r90.y && mousy <= (r90.y + r90.h)){
                 ihp2=78;
 
@@ -109,6 +120,8 @@ void StartMenu(){
                 }
                 else if(mousx >=r91.x && mousx <= (r91.x + r91.w) && mousy >= r91.y && mousy <= (r91.y + r91.h)){
                 ihp2=79;
+                                    Mix_PlayChannel(-1,mouse,0);
+
             }
                else if(mousx >=r75.x && mousx <= (r75.x + r75.w) && mousy >= r75.y && mousy <= (r75.y + r75.h)){
                 ihp2=80;
@@ -116,6 +129,8 @@ void StartMenu(){
 
                else if(mousx >=r93.x && mousx <= (r93.x + r93.w) && mousy >= r93.y && mousy <= (r93.y + r93.h)){
                 ihp2=4,ihp=93;
+                                    Mix_PlayChannel(-1,mouse,0);
+
             }
            }
             else 
@@ -149,6 +164,8 @@ void StartMenu(){
             SDL_RenderCopy(rend,i93, NULL, &r93);
          if (button & SDL_BUTTON(SDL_BUTTON_LEFT))
             {
+                                    Mix_PlayChannel(-1,mouse,0);
+
                  if(mousx >=r89.x && mousx <= (r89.x + r89.w) && mousy >= r89.y && mousy <= (r89.y + r89.h)){
                 ihp2=3;
 
@@ -156,6 +173,8 @@ void StartMenu(){
                 }
                 else if(mousx >=r93.x && mousx <= (r93.x + r93.w) && mousy >= r93.y && mousy <= (r93.y + r93.h)){
                 ihp2=4;
+                                    Mix_PlayChannel(-1,mouse,0);
+
             }
            }
             else 
@@ -183,6 +202,7 @@ void StartMenu(){
             {
                  if(mousx >=r93.x && mousx <= (r93.x + r93.w) && mousy >= r93.y && mousy <= (r93.y + r93.h)){
                 ihp2=4,ihp=44;
+                                    Mix_PlayChannel(-1,mouse,0);
 
                 
                 }
@@ -220,11 +240,14 @@ void StartMenu(){
             {
                  if(mousx >=r87.x && mousx <= (r87.x + r87.w) && mousy >= r87.y && mousy <= (r87.y + r87.h)){
                 ihp2=0,ihp=0;
+                                    Mix_PlayChannel(-1,mouse,0);
 
                 
                 }
                 else if(mousx >=r88.x && mousx <= (r88.x + r88.w) && mousy >= r88.y && mousy <= (r88.y + r88.h)){
-                SDL_Quit();
+                                        Mix_PlayChannel(-1,mouse,0);
+
+                isRunning =false;
             }
            }
             else 
@@ -268,7 +291,8 @@ void StartMenu(){
                  if(mousx >=r89.x && mousx <= (r89.x + r89.w) && mousy >= r89.y && mousy <= (r89.y + r89.h)){
                 ihp2=81;
 
-                
+                                    Mix_PlayChannel(-1,mouse,0);
+
                 }
              
            }
@@ -293,6 +317,8 @@ void StartMenu(){
             {
                  if(mousx >=crossr.x && mousx <= (crossr.x + crossr.w) && mousy >= crossr.y && mousy <= (crossr.y + crossr.h)){
                 ihp2=2;
+                                    Mix_PlayChannel(-1,mouse,0);
+
 
                 
                 }

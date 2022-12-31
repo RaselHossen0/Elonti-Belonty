@@ -1,6 +1,6 @@
 #include "AllHeaderFiles.h"
 
-Mix_Chunk *ore1,*ore2,*ore3,*ore4,*orena1,*orena2,*orena3,*mAin;
+Mix_Chunk *ore1,*ore2,*ore3,*ore4,*orena1,*orena2,*orena3,*mAin,*mouse;
 void audioLoad(){
 
 mAin=Mix_LoadWAV("res/aud.mp3");
@@ -18,4 +18,5 @@ orena1=Mix_LoadWAV("res/orena1.mp3");
 orena2=Mix_LoadWAV("res/orena2.mp3");
 
 orena3=Mix_LoadWAV("res/orena3.mp3");
+mouse=Mix_LoadWAV("res/mouseclick.mp3");
 }

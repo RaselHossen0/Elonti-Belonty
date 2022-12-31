@@ -30,6 +30,7 @@ void init()
         printf("image: %s\n",SDL_GetError());*/
     if(Mix_OpenAudio(44100,MIX_DEFAULT_FORMAT,2,2048)<0)
     printf("successful");
+	TTF_Init();
   
    // printf("Initialization Complete\n");
 

@@ -4,12 +4,15 @@ extern  int gameover;
  int frameTime3=0;
  int ftham=0;
    extern int flag;
+   FILE *fp;
 
   int f1,f2,f3,f4,f5,f6,f7;
  
    TTF_Font* ff=TTF_OpenFont( "res/fonts/Oswald-Bold.ttf", 28 );
+   SDL_Texture *ftex;
 void Level1(){
-      TTF_Init();
+     // fopen("res/a.txt",'r');
+
 SDL_RenderClear(rend);
      SDL_RenderCopy(rend,fb_tex,NULL,&fb);
          SDL_RenderCopy(rend,tex,&playerRect,&playerPosition);
@@ -38,19 +41,29 @@ SDL_RenderClear(rend);
                if(ftime ==2)ftim =1;
                 if(ftime ==3)ftim =0;
 //printf("%d ",ftim);
-             
-        
+  TTF_Font* ff1=TTF_OpenFont( "res/fonts/Oswald-Bold.ttf", 28 );
+             if(!ff1)
+           fprintf(fp,"a.txt","%s ",SDL_GetError());
             std::string fi=std::to_string(ftim);
-            SDL_Surface* fsurface=TTF_RenderText_Solid(ff,fi.c_str(),{255,255,255});
-            SDL_Texture* ftex=SDL_CreateTextureFromSurface(rend,fsurface);
-            SDL_FreeSurface(fsurface);
+            //printf("%s ",fi);
+            SDL_Surface* fsurface=TTF_RenderText_Solid(ff1,fi.c_str(),{255,0,0});
+             if(!fsurface)
+             printf("%s #",SDL_GetError());
+            ftex=SDL_CreateTextureFromSurface(rend,fsurface);
+           
+             SDL_FreeSurface(fsurface);
+              if(!ftex)
+             printf("%s *",SDL_GetError());
             SDL_Rect fr;//for font
             fr.x=500;
             fr.y=120;
             fr.w=260;
             fr.h=260;
+            // loadTextSurfacewithRect(fi.c_str(),ff,{255,255,255},fr);
             if(ftime>=4)
             SDL_DestroyTexture(ftex);
+            
+            SDL_RenderCopy(rend,ftex,NULL,&fr);
             
             if(ftime>=f1&&ftime<=f1+2)
             {   SDL_RenderCopy(rend,f18_tex,NULL,&f15);
